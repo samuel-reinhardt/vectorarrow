@@ -7,8 +7,8 @@ content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. An hoc usque
 template = "text-section"
 [[content]]
 background-image = ""
-background_color = ""
-content = ""
+background_color = "#4A90E2"
+content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. An hoc usque quaque, aliter in vita?\n"
 template = "cover-section"
 
 +++
