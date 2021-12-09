@@ -1,5 +1,4 @@
 +++
-draft = true
 featured_image = ""
 title = "VectorArrow"
 [[content]]
