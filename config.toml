@@ -1,3 +1,7 @@
 baseURL = "http://vectorarrow.com/"
 languageCode = "en-us"
 title = "VectorArrow"
+[module]
+[[module.mounts]]
+	source = 'static/uploads'
+	target = 'assets/uploads'

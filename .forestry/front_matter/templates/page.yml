@@ -21,3 +21,5 @@ fields:
   config:
     min: 
     max: 
+pages:
+- content/gallery.md
