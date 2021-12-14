@@ -1,0 +1,9 @@
+{{ $image := resources.Get .Destination }}
+{{ $medium_image := $image.Resize "600x" }}
+<img src="{{ .Destination }}" srcset="{{ $medium_image.RelPermalink }} 600w">
+{{ printf "%#v" . }}
+<p>---image---</p>
+{{ printf "%#v" $image }}
+<p>--destination---</p>
+{{ .Destination }}
+
