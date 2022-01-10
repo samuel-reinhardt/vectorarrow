@@ -1,3 +1,12 @@
-{{ $image := resources.Get .Destination }}
-{{ $medium_image := $image.Resize "600x" }}
-<img src="{{ .Destination }}" srcset="{{ $medium_image.RelPermalink }} 600w">
+{{- $full_image := resources.Get .Destination -}}
+{{- $small_image := $full_image.Resize "300x" -}}
+{{- $medium_image := $full_image.Resize "600x" -}}
+{{- $large_image := $full_image.Resize "1000x" }}
+{{- $extra_large_image := $full_image.Resize "2000x" }}
+{{- $small_webp := $full_image.Resize "300x webp" -}}
+{{- $medium_webp := $full_image.Resize "600x webp" -}}
+{{- $large_webp := $full_image.Resize "1000x webp" -}}
+{{- $extra_large_webp:= $full_image.Resize "2000x webp" -}}
+<picture>{{/* .Destination */}}
+	<img src="{{ $small_image.RelPermalink }}" srcset="{{ $small_image.RelPermalink }} 300w, {{ $medium_image.RelPermalink }} 600w, {{ $large_image.RelPermalink }} 1000w, {{ $extra_large_image.RelPermalink }} 2000, {{ .Destination }}" sizes="(max-width: 1000px) 100vw,  1000px" >
+</picture>
